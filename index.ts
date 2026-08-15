@@ -11,6 +11,7 @@
 // ab humko ess file ko cmd line se executable bana hai to uska leya we have to add one line at the top of this program.
 
 import { Command } from "commander";
+import { runWakeUp } from "./tui/wakeup.js";
 
 
 
@@ -27,6 +28,8 @@ program
     // console.log("lawda is awake now");
     await runWakeUp();
   });
+
+//   ye upar wala pura structure hai jiske through humm cmd bana raha hota hai cli ki
 
 
 await program.parseAsync(process.argv);
