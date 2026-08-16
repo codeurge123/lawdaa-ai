@@ -17,13 +17,13 @@ import { runWakeUp } from "./tui/wakeup.js";
 
 const program = new Command();
 
-program.name("lawdaa").description("CLI to manage lawda").version("0.1.0");
+program.name("lawdaa").description("lawdaa is an open-source ai agent that help you in writing the code").version("0.1.0");
 
 
 // ab jaise he koi mujhe 'lawda wakeup' cmd de ga to mera ye below wala code ko run kar dena.
 program
   .command("wakeup")
-  .description("wake up the lawda")
+  .description("wake up the lawdaa ai agent")
   .action(async () => {
     // console.log("lawda is awake now");
     await runWakeUp();
