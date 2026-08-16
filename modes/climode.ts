@@ -22,6 +22,7 @@ export async function runCliMode() {
 
     if(submode === 'agent') {
         console.log(chalk.dim('Starting Agent mode...'))
+        // agent mode implement karne se phala we have to config our ai so for that first make the "ai" folder
     }
     else if(submode === 'Plan') { 
         console.log(chalk.dim('Starting Plan mode...'))

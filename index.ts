@@ -3,7 +3,7 @@
 
 // this above is that line that we have to add at the top of this file to make it executable from command line.
 
-// lawda wakeup --> first cmd to start our cli
+// lawdaa wakeup --> first cmd to start our cli
 
 // figlet -> it is the package used to create banner for cli applications.
 // clack -> this package is used to create interactive cli applications.
@@ -20,7 +20,7 @@ const program = new Command();
 program.name("lawdaa").description("lawdaa is an open-source ai agent that help you in writing the code").version("0.1.0");
 
 
-// ab jaise he koi mujhe 'lawda wakeup' cmd de ga to mera ye below wala code ko run kar dena.
+// ab jaise he koi mujhe 'lawdaa wakeup' cmd de ga to mera ye below wala code ko run kar dena.
 program
   .command("wakeup")
   .description("wake up the lawdaa ai agent")
@@ -28,8 +28,7 @@ program
     // console.log("lawda is awake now");
     await runWakeUp();
   });
-
-//   ye upar wala pura structure hai jiske through humm cmd bana raha hota hai cli ki
+//   ye upar wala pura structure hai jiske through humm cmd bana raha hota hai cli ki using "commander" package
 
 
 await program.parseAsync(process.argv);
