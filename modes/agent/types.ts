@@ -38,9 +38,10 @@ export interface AgentConfig {
     allowFolderCreation: boolean;
   };
 }
-
+;
 export const defaultAgentConfig = (): AgentConfig => ({
   codebasePath: process.cwd(),
+//   according to this : codebase path aap ka vhi hoga jiss directory mein aap kaam kar raha ho.
   maxFileSizeToRead: 1024 * 1024 ,
   excludePatterns: [
     'node_modules',
@@ -59,6 +60,7 @@ export const defaultAgentConfig = (): AgentConfig => ({
   },
 });
 
+// mutation ka matlab hota hai koi chij create ya update karna.
 export function isMutationType(t: ActionType): boolean {
   return (
     t === 'file_create' ||
