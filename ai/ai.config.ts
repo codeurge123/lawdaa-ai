@@ -1,4 +1,10 @@
 import { createOpenRouter } from '@openrouter/ai-sdk-provider'
+import dotenv from 'dotenv';
+
+dotenv.config({
+    path: '.env'
+});
+
 
 export function getAgentModel() {
 
@@ -15,4 +21,4 @@ export function getAgentModel() {
 
 }
 
-// ye wala part responsible hai LLM se communication ke leya.
+// ye wala part responsible hai LLM se communication ke leya
