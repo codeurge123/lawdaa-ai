@@ -5,6 +5,7 @@ import type { ActionTracker } from "../agent/action-tracker.ts";
 
 let client: Firecrawl | null = null;
 
+// ye just humm ne 'firecrawl client' ko setup kara hai
 function getClient(): Firecrawl {
   if (client) return client;
   client = new Firecrawl({

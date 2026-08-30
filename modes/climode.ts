@@ -1,6 +1,8 @@
 import chalk from "chalk";
 import { select, isCancel } from "@clack/prompts";
 import { runAgentMode } from "./agent/orchestrator";
+import { runPlanMode } from "./plan/orchestrator";
+import { runAskMode } from "./ask/orchestrator";
 
 export async function runCliMode() {
     // console.log('Starting cli mode...');
@@ -28,9 +30,11 @@ export async function runCliMode() {
         }
         else if (submode === 'Plan') {
             console.log(chalk.dim('Starting Plan mode...'))
+            await runPlanMode();
         }
         else {
             console.log(chalk.red('Invalid submode selected. Please try again.'));
+            await runAskMode();
         }
     }
 
