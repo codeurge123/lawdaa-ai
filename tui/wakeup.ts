@@ -2,6 +2,7 @@ import { select, isCancel } from "@clack/prompts";
 import chalk from "chalk";
 import figlet from "figlet";
 import { runCliMode } from "../modes/climode";
+import { runTelegramMode } from "../modes/telegram";
 
 const Banner_Font = 'ANSI Shadow';
 const shadow = chalk.hex('#f5ab69')
@@ -24,8 +25,8 @@ export async function runWakeUp() {
         ]
     })
 
-    if(isCancel(mode || mode === 'Exit')) {
-        console.log(chalk.red('Goodbye...'));
+    if(isCancel(mode) || mode === 'Exit') {
+        console.log(chalk.red('\n Goodbye... \n'));
         process.exit(0);
     }
 
@@ -35,7 +36,8 @@ export async function runWakeUp() {
 
     }
     else if(mode === 'Telegram') { 
-        console.log(chalk.dim('Starting Telegram bot mode...'))
+        // console.log(chalk.dixm('Starting Telegram bot mode...'))
+        await runTelegramMode();
     }
 
 }

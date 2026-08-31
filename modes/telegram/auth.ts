@@ -1,1 +1,2 @@
 export const isOwner = (id: number) => String(id) === process.env.TELEGRAM_OWNER_ID?.trim();
+// ye function ek id accept kar rh hai aur es id ko match kr rh hai telegram owner ke id se and if matches then only give the access to the bot of the telegram 
