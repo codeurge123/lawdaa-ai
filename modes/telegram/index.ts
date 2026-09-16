@@ -1,6 +1,7 @@
 import { Telegraf } from "telegraf";
 import chalk from "chalk";
 import { WELCOME } from "./constants";
+import { registerHandlers } from "./handlers";
 
 
 // basically jab bhi aap telegram bot ko implement karte ho to aap ko 2 chija lagte hai phala bot ka token lagta hai aur second thing is owner ke id lagte hai 
@@ -12,7 +13,7 @@ export async function runTelegramMode() {
 
     // this is how we initialize our telegram bot : 
     const bot = new Telegraf(token!); // using telegraf kuch ess tarika se humm telegram bot implement kar raha hota hai
-    // registerHandlers(bot);
+    registerHandlers(bot); 
 
     await bot.telegram.sendMessage(ownerID!, WELCOME, {
         parse_mode: "Markdown"

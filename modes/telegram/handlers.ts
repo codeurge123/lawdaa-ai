@@ -8,6 +8,12 @@ export function registerHandlers(bot : Telegraf) {
         if(!isOwner(ctx.chat.id)) return;
         await ctx.reply(WELCOME, {parse_mode: "Markdown"});
     })
+
+    bot.command("ask", async (ctx) => {
+        if(!isOwner(ctx.chat.id)) return;
+        const q = commandArf(ctx.message.text, "ask");
+    })
+
 }
 
 
