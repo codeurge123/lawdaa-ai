@@ -38,7 +38,7 @@ export interface AgentConfig {
     allowFolderCreation: boolean;
   };
 }
-;
+
 export const defaultAgentConfig = (): AgentConfig => ({
   codebasePath: process.cwd(),
 //   according to this : codebase path aap ka vhi hoga jiss directory mein aap kaam kar raha ho.
