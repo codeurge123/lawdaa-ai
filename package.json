@@ -2,9 +2,15 @@
   "name": "lawda",
   "module": "index.ts",
   "type": "module",
+  "version": "0.0.1",
+  "description" : "A CLI tool to interact with your codebase using AI",
   "private": true,
   "bin": {
     "lawdaa": "./index.ts"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
   },
   "devDependencies": {
     "@types/bun": "latest"

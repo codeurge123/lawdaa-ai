@@ -1,0 +1,51 @@
+# dependencies
+node_modules
+
+# lockfiles (not needed by consumers)
+bun.lock
+bun.lockb
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# environment / secrets
+.env
+.env.*
+!.env.example
+
+# build output & caches
+out
+dist
+coverage
+*.lcov
+*.tgz
+.cache
+.eslintcache
+*.tsbuildinfo
+
+# tests
+test
+tests
+__tests__
+*.test.ts
+*.spec.ts
+
+# local notes & agent instructions
+CLAUDE.md
+ask-wakeup.md
+.claude
+
+# editors / OS
+.idea
+.vscode
+.DS_Store
+
+# logs
+logs
+*.log
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# vcs / CI
+.git
+.gitignore
+.github
